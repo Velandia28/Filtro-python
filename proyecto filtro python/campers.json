@@ -1,24 +1,13 @@
 [
     {
-        "Doc": 100733,
-        "Nombres": "felipe",
-        "Apellidos": "llanes",
-        "Direccion": "diamante 2",
-        "Acudiente": "monica velandia, mama, 314",
-        "Celular": 321,
+        "Doc": 100,
+        "Nombres": "lf",
+        "Apellidos": "vll",
+        "Direccion": "bga",
+        "Acudiente": "mlvll, mom, 3100",
+        "Celular": 321912,
         "Estado": "proceso de ingreso ",
-        "Ruta Asignada": "",
-        "Riesgo": ""
-    },
-    {
-        "Doc": 8892,
-        "Nombres": "moni",
-        "Apellidos": "lla",
-        "Direccion": "soa",
-        "Acudiente": "graciela, mama,923",
-        "Celular": 3102182350,
-        "Estado": "proceso de ingreso ",
-        "Ruta Asignada": "",
+        "Ruta Asignada": "Java",
         "Riesgo": ""
     }
 ]
