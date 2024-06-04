@@ -22,7 +22,7 @@ def registrar_camper():
     "Direccion":"",
     "Acudiente":"",
     "Celular":"",
-    "Estado":"inscrito",
+    "Estado":"proceso de ingreso ",
     "Ruta Asignada" : "",
     "Riesgo":""
     }
