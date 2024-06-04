@@ -10,6 +10,7 @@ datos = {
     "Estado": "proceso de ingreso",
     "Ruta Asignada": "",
     "Riesgo": ""
+    "Aula":""
 }
 print("                        ")
 print("BIENVENIDO A CAMPUSLANDS")
@@ -18,7 +19,7 @@ print("Con qué rol va a ingresar a Campuslands")
 print("                                         ")
 menu_principal = ("1. Coordinador", "2. Trainer", "3. Camper", "4. SALIR")
 
-menu_cor = ("1. registrar camper", "2. registrar notas","3. Ingresar matricula ", "4. SALIENDO ...")
+menu_cor = ("1. registrar camper", "2. registrar notas","3. Ingresar matricula ","4. sasignar area de entrenamiento ", "5. SALIENDO ...")
 
 for i in menu_principal: 
     print(i)
@@ -59,20 +60,15 @@ elif opc == 1:
         datos["Direccion"] = input("Ingrese su Dirección de residencia: ")
         datos["Acudiente"] = input("Ingrese los Datos de su Acudiente (Nombre completo, Parentesco y Número telefónico): ")
         datos["Celular"] = input("Ingrese su Número de celular: ")
-        #datos["Ruta Asignada"] = input("Ingrese la ruta que va a desarrollar el camper (NodeJs, Java, Netcore): ")
-        
-        data.append(datos)
-        
+        data.append(datos)        
         with open(ruta_archivo, "w") as file:
             json.dump(data, file, indent=4)
-        
         print("********************************************************")
         print("Se ha registrado correctamente")
         print("********************************************************")
         print(data)
     elif opci == 2:                    
         doc = input("Ingrese el documento para ingresar notas: ")
-        
         try:
             with open(ruta_archivo, "r") as file:
                 data = json.load(file)
@@ -88,7 +84,6 @@ elif opc == 1:
             except ValueError:
                 print("Error de digitación, favor ingresar UNICAMENTE NÚMEROS")
                 nota_teo, nota_pract = 0, 0
-
             prom = (nota_pract + nota_teo) / 2
             if prom >= 60:
                 camper["Estado"] = "Aprobado"
@@ -119,12 +114,36 @@ elif opc == 1:
                 camper["Ruta Asignada"] = ruta
                 with open(ruta_archivo, "w") as file:
                     json.dump(data, file, indent=4)
+                if camper["Ruta Asignada"] =="Java" or "JAVA":
+                    print("****************************************************************")
+                    print("contiene los siguientes modulos: ","Fundamentos de programación","Programación Web","Programación formal","Bases de datos","Backend " )
+                elif camper["Ruta Asignada"] =="NetCore" or "netcore" or "NETCORE":
+                    print("****************************************************************")
+                    print("contiene los siguientes modulos: ","Fundamentos de programación","Programación Web","Programación formal","Bases de datos","Backend " )  
+                elif camper["Ruta Asignada"] =="NodeJs" or "nodejs" or "NODEJS":
+                    print("****************************************************************")
+                    print("contiene los siguientes modulos: ","Fundamentos de programación","Programación Web","Programación formal","Bases de datos","Backend " )  
+                        
                 print("********************************************************")
                 print("Se ha registrado correctamente")
                 print("********************************************************")
                 print(camper)
-    else:
-        print("Opción no válida. Intente de nuevo.")
+    elif opci == 4:
+        doc = input("Ingrese el documento para ingresar notas: ")
+        try:
+            with open(ruta_archivo, "r") as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            print("El archivo no existe")
+            print("¡¡¡ Creando Archivo  !!")
+            data = []
+        camper = next((item for item in data if item["Doc"] == doc), None)
+        if datos["Ruta Asignada"]
+            
+
+
+        else:
+            print("Opción no válida. Intente de nuevo.")
 elif opc == 2:
     print("                            ")
     print(" BIENVENIDO TRAINER ")
