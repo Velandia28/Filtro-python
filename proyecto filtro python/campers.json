@@ -11,5 +11,32 @@
         "Riesgo": "",
         "Aula": "Apolo",
         "Trainer": "adeian"
+    },
+    {
+        "Doc": "1200",
+        "Nombres": "bdsf",
+        "Apellidos": "gfds",
+        "Direccion": "bga",
+        "Acudiente": "msdg. mama.",
+        "Celular": "156",
+        "Estado": "Aprobado",
+        "Ruta Asignada": "netcore",
+        "Riesgo": "",
+        "Aula": "Apolo",
+        "Trainer": " andes"
+    },
+    {
+        "Doc": "130",
+        "Nombres": "jorge",
+        "Apellidos": "lopez",
+        "Direccion": "bga",
+        "Acudiente": "hgdag, mama,561",
+        "Celular": "313",
+        "Estado": "Aprobado",
+        "Ruta Asignada": "java",
+        "Riesgo": "",
+        "Aula": "Apolo",
+        "Trainer": "fel",
+        "Horario": "6.00 p - 10.00pm"
     }
 ]

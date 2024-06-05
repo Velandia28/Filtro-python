@@ -11,7 +11,8 @@ datos = {
     "Ruta Asignada": "",
     "Riesgo": "",
     "Aula": "",
-    "Trainer":""
+    "Trainer":"",
+    "Horario":""
 }
 print("                        ")
 print("BIENVENIDO A CAMPUSLANDS")
@@ -95,7 +96,7 @@ elif opc == 1:
                 print("********************************************************")
                 print("Se ha registrado correctamente")
                 print("********************************************************")
-                print(camper)
+                print(data)
             else:
                 print("El promedio es menor a 60. No se puede aprobar.")
         else:
@@ -106,7 +107,7 @@ elif opc == 1:
             with open(ruta_archivo, "r") as file:
                 data = json.load(file)
         except FileNotFoundError:
-            print("El archivo no existe")
+            print("El archivo Docno existe")
             data = []
         camper = next((item for item in data if item["Doc"] == doc), None)
         if camper:
@@ -122,12 +123,11 @@ elif opc == 1:
                     print("contiene los siguientes modulos: ","Fundamentos de programación","Programación Web","Programación formal","Bases de datos","Backend " )  
                 elif camper["Ruta Asignada"] =="NodeJs" or "nodejs" or "NODEJS":
                     print("****************************************************************")
-                    print("contiene los siguientes modulos: ","Fundamentos de programación","Programación Web","Programación formal","Bases de datos","Backend " )  
-                        
-                print("********************************************************")
-                print("Se ha registrado correctamente")
-                print("********************************************************")
-                print(camper)
+                    print("contiene los siguientes modulos: ","Fundamentos de programación","Programación Web","Programación formal","Bases de datos","Backend " )                 
+        print("********************************************************")
+        print("Se ha registrado correctamente")
+        print("********************************************************")
+        print(data)
     elif opci == 4:
         doc = input("Ingrese el documento para asignar el aula : ")
         try:
@@ -142,28 +142,28 @@ elif opc == 1:
                 camper["Aula"]="Sputnik"
             with open(ruta_archivo, "w") as file:
                 json.dump(data, file, indent=4)
-                print("********************************************************")
-                print("Se ha registrado correctamente")
-                print("********************************************************")
-                print(camper)   
+            print("********************************************************")
+            print("Se ha registrado correctamente")
+            print("********************************************************")
+            print (data)   
         if camper:
             if camper["Ruta Asignada"] == "NetCore" or "netcore" or "NETCORE":
                 camper["Aula"]="Artemis"
             with open(ruta_archivo, "w") as file:
                 json.dump(data, file, indent=4)
-                print("********************************************************")
-                print("Se ha registrado correctamente")
-                print("********************************************************")
-                print(camper)
+            print("********************************************************")
+            print("Se ha registrado correctamente")
+            print("********************************************************")
+               
         if camper:
             if camper["Ruta Asignada"] == "NodeJs" or "nodejs" or "NODEJS":
                 camper["Aula"]="Apolo"
             with open(ruta_archivo, "w") as file:
                 json.dump(data, file, indent=4)
-                print("********************************************************")
-                print("Se ha registrado correctamente")
-                print("********************************************************")
-                print(camper)
+            print("********************************************************")
+            print("Se ha registrado correctamente")
+            print("********************************************************")
+            print (data)
 elif opc == 2:
     print("                            ")
     print(" BIENVENIDO TRAINER ")
@@ -192,9 +192,29 @@ elif opc == 2:
             camper["Trainer"]=trainer
         with open(ruta_archivo, "w") as file:
             json.dump(data, file, indent=4)
-        print("********************************************************")
-        print("Se ha registrado correctamente")
-        print("********************************************************")
-        print(camper)
-        
+            print("********************************************************")
+            print("Se ha registrado correctamente")
+            print("********************************************************")
+            print (data)
+    elif opcio == 2:
+        doc = input("Ingrese el documento para asignar un horario: ")
+        print("Los horarios de las clases inician cada 4 horas y los horarios disponibles son","(Lunes - Virnes)","(6.00 am - 10.00 am)","(10.00am- 2.00pm)","(2.00pm-6.00pm)","(6.00p - 10.00pm)")
+        try:
+            with open(ruta_archivo, "r") as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            print("El archivo no existe")
+            data = []
+        camper = next((item for item in data if item["Doc"] == doc), None)
+        if camper:
+            print=datos["Ruta Asignada"]
+            horario=input("ingrese el horario que mas se ajusta a usted para desarrollar la ruta programada: ")
+            camper["Horario"]=horario
+        with open(ruta_archivo, "w") as file:
+            json.dump(data, file, indent=4)
+            print("********************************************************")
+            print("Se ha registrado correctamente")
+            print("********************************************************")
+            print (data)
+
 
