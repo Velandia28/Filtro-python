@@ -9,17 +9,20 @@ datos = {
     "Celular": "",
     "Estado": "proceso de ingreso",
     "Ruta Asignada": "",
-    "Riesgo": ""
-    "Aula":""
+    "Riesgo": "",
+    "Aula": "",
+    "Trainer":""
 }
 print("                        ")
 print("BIENVENIDO A CAMPUSLANDS")
 print("                        ")
 print("Con qué rol va a ingresar a Campuslands")
 print("                                         ")
-menu_principal = ("1. Coordinador", "2. Trainer", "3. Camper", "4. SALIR")
+menu_principal = ("1. Coordinador", "2. Trainer", "3. Camper", "4. SALIR ....")
 
-menu_cor = ("1. registrar camper", "2. registrar notas","3. Ingresar matricula ","4. sasignar area de entrenamiento ", "5. SALIENDO ...")
+menu_cor = ("1. registrar camper", "2. registrar notas","3. Ingresar matricula ","4. Asignar area de entrenamiento ", "5. SALIR ...")
+
+menu_trainer = ("1. Asignar ruta","2. Asignar Horario ","3. SALIR ....")
 
 for i in menu_principal: 
     print(i)
@@ -51,6 +54,7 @@ elif opc == 1:
                 data = json.load(file)
         except FileNotFoundError:
             print("El archivo no existe")
+            print("*****************************************")
             print("¡¡¡ Creando Archivo  !!")
             data = []
         print("****************************************************")
@@ -74,7 +78,6 @@ elif opc == 1:
                 data = json.load(file)
         except FileNotFoundError:
             print("El archivo no existe")
-            print("¡¡¡ Creando Archivo  !!")
             data = []
         camper = next((item for item in data if item["Doc"] == doc), None)
         if camper:
@@ -99,18 +102,15 @@ elif opc == 1:
             print("No se encontró un camper con ese documento.")
     elif opci == 3: 
         doc = input("Ingrese el documento para nodificar ruta: ")
-        
         try:
             with open(ruta_archivo, "r") as file:
                 data = json.load(file)
         except FileNotFoundError:
             print("El archivo no existe")
-            print("¡¡¡ Creando Archivo  !!")
             data = []
         camper = next((item for item in data if item["Doc"] == doc), None)
         if camper:
                 ruta=input("ingrese el nombre de la ruta asignada(Java, NetCore, NodeJs): ")
-
                 camper["Ruta Asignada"] = ruta
                 with open(ruta_archivo, "w") as file:
                     json.dump(data, file, indent=4)
@@ -129,26 +129,72 @@ elif opc == 1:
                 print("********************************************************")
                 print(camper)
     elif opci == 4:
-        doc = input("Ingrese el documento para ingresar notas: ")
+        doc = input("Ingrese el documento para asignar el aula : ")
         try:
             with open(ruta_archivo, "r") as file:
                 data = json.load(file)
         except FileNotFoundError:
             print("El archivo no existe")
-            print("¡¡¡ Creando Archivo  !!")
             data = []
         camper = next((item for item in data if item["Doc"] == doc), None)
-        if datos["Ruta Asignada"]
-            
-
-
-        else:
-            print("Opción no válida. Intente de nuevo.")
+        if camper:
+            if camper["Ruta Asignada"] == "JAVA" or "java" or "Java":
+                camper["Aula"]="Sputnik"
+            with open(ruta_archivo, "w") as file:
+                json.dump(data, file, indent=4)
+                print("********************************************************")
+                print("Se ha registrado correctamente")
+                print("********************************************************")
+                print(camper)   
+        if camper:
+            if camper["Ruta Asignada"] == "NetCore" or "netcore" or "NETCORE":
+                camper["Aula"]="Artemis"
+            with open(ruta_archivo, "w") as file:
+                json.dump(data, file, indent=4)
+                print("********************************************************")
+                print("Se ha registrado correctamente")
+                print("********************************************************")
+                print(camper)
+        if camper:
+            if camper["Ruta Asignada"] == "NodeJs" or "nodejs" or "NODEJS":
+                camper["Aula"]="Apolo"
+            with open(ruta_archivo, "w") as file:
+                json.dump(data, file, indent=4)
+                print("********************************************************")
+                print("Se ha registrado correctamente")
+                print("********************************************************")
+                print(camper)
 elif opc == 2:
     print("                            ")
     print(" BIENVENIDO TRAINER ")
     print("Escoja la opción que va a realizar")
+    for t in menu_trainer:
+        print(t)
+    try:
+        opcio = int(input("Ingrese el número del menú al que desea ingresar: "))
+    except ValueError:
+        print("Por favor ingrese un número válido.")
+        opcio = 0
+    if opcio == len(menu_trainer):
+        print("SALIENDO.....")
+    elif opcio == 1:
+        doc = input("Ingrese el documento para asignar un trainer segun la ruta a desarrollar : ")
+        try:
+            with open(ruta_archivo, "r") as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            print("El archivo no existe")
+            data = []
+        camper = next((item for item in data if item["Doc"] == doc), None)
+        if camper:
+            print=datos["Ruta Asignada"]
+            trainer=input("ingrese el nombre del Trainer que va a desarrollar su ruta asignada:")
+            camper["Trainer"]=trainer
+        with open(ruta_archivo, "w") as file:
+            json.dump(data, file, indent=4)
+        print("********************************************************")
+        print("Se ha registrado correctamente")
+        print("********************************************************")
+        print(camper)
+        
 
-
-else:
-    print("Opción no válida. Intente de nuevo.")
