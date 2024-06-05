@@ -19,20 +19,20 @@ print("BIENVENIDO A CAMPUSLANDS")
 print("                        ")
 print("Con qué rol va a ingresar a Campuslands")
 print("                                         ")
-menu_principal = ("1. Coordinador", "2. Trainer", "3. Camper", "4. SALIR ....")
+menu_principal = ("1. Coordinador", "2. Trainer", "3. Camper", "4. SALIR ....","5.volver")
 
-menu_cor = ("1. registrar camper", "2. registrar notas","3. Ingresar matricula ","4. Asignar area de entrenamiento ", "5. SALIR ...")
+menu_cor = ("1. registrar camper", "2. registrar notas","3. Ingresar matricula ","4. Asignar area de entrenamiento ", "5. SALIR.. ","6. Volver ")
 
-menu_trainer = ("1. Asignar ruta","2. Asignar Horario ","3. SALIR ....")
+menu_trainer = ("1. Asignar ruta","2. Asignar Horario ","3. SALIR ....","4.v Volver")
 
 for i in menu_principal: 
     print(i)
-try:   
+try:
     opc = int(input("Ingrese el número del menú al que desea ingresar: "))
 except ValueError:
     print("Por favor ingrese un número válido.")
 
-if opc == len(menu_principal):
+if opc == len(menu_principal) -1 :
     print("                        ")
     print("SALIENDO.....")
     print("*****************************")
@@ -47,16 +47,15 @@ elif opc == 1:
     except ValueError:
         print("Por favor ingrese un número válido.")
         opci = 0
-    if opci == len(menu_cor):
+    if opci == len(menu_cor)-1:
         print("SALIENDO.....")
+    
     elif opci == 1:
         try:
             with open(ruta_archivo, "r") as file:
                 data = json.load(file)
         except FileNotFoundError:
             print("El archivo no existe")
-            print("*****************************************")
-            print("¡¡¡ Creando Archivo  !!")
             data = []
         print("****************************************************")
         datos["Doc"] = input("Ingrese su Número de Documento: ")
@@ -175,7 +174,7 @@ elif opc == 2:
     except ValueError:
         print("Por favor ingrese un número válido.")
         opcio = 0
-    if opcio == len(menu_trainer):
+    if opcio == len(menu_trainer) -1:
         print("SALIENDO.....")
     elif opcio == 1:
         doc = input("Ingrese el documento para asignar un trainer segun la ruta a desarrollar : ")
@@ -200,10 +199,10 @@ elif opc == 2:
         doc = input("Ingrese el documento para asignar un horario: ")
         print("Los horarios de las clases inician cada 4 horas y los horarios disponibles son","(Lunes - Virnes)","(6.00 am - 10.00 am)","(10.00am- 2.00pm)","(2.00pm-6.00pm)","(6.00p - 10.00pm)")
         try:
-            with open(ruta_archivo, "r") as file:
-                data = json.load(file)
-        except FileNotFoundError:
-            print("El archivo no existe")
+            opcio = int(input("Ingrese el número del menú al que desea ingresar: "))
+        except ValueError:
+            print("Por favor ingrese un número válido.")
+            opcio = 0
             data = []
         camper = next((item for item in data if item["Doc"] == doc), None)
         if camper:
