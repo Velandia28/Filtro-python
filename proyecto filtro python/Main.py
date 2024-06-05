@@ -161,8 +161,9 @@ elif opc == 1:
             print("Se ha registrado correctamente")
             print("********************************************************")
             print (data)
-    elif opci == 6:
+
 elif opc == 2:
+
     print("                            ")
     print(" BIENVENIDO TRAINER ")
     print("Escoja la opción que va a realizar")
@@ -214,4 +215,6 @@ elif opc == 2:
             print("Se ha registrado correctamente")
             print("********************************************************")
             print (data)
-
+elif opc == 3:
+    print("                            ")
+    print(" BIENVENIDO CAMPER ")
