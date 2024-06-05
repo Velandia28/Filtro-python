@@ -19,11 +19,11 @@ print("BIENVENIDO A CAMPUSLANDS")
 print("                        ")
 print("Con qué rol va a ingresar a Campuslands")
 print("                                         ")
-menu_principal = ("1. Coordinador", "2. Trainer", "3. Camper", "4. SALIR ....","5.volver")
+menu_principal = ("1. Coordinador", "2. Trainer", "3. Camper", "4. SALIR ")
 
 menu_cor = ("1. registrar camper", "2. registrar notas","3. Ingresar matricula ","4. Asignar area de entrenamiento ", "5. SALIR.. ","6. Volver ")
 
-menu_trainer = ("1. Asignar ruta","2. Asignar Horario ","3. SALIR ....","4.v Volver")
+menu_trainer = ("1. Asignar ruta","2. Asignar Horario ","3. SALIR ","4.v Volver")
 
 for i in menu_principal: 
     print(i)
@@ -46,10 +46,8 @@ elif opc == 1:
         opci = int(input("Ingrese el número del menú al que desea ingresar: "))
     except ValueError:
         print("Por favor ingrese un número válido.")
-        opci = 0
     if opci == len(menu_cor)-1:
-        print("SALIENDO.....")
-    
+        print("SALIENDO.....")   
     elif opci == 1:
         try:
             with open(ruta_archivo, "r") as file:
@@ -163,6 +161,7 @@ elif opc == 1:
             print("Se ha registrado correctamente")
             print("********************************************************")
             print (data)
+    elif opci == 6:
 elif opc == 2:
     print("                            ")
     print(" BIENVENIDO TRAINER ")
@@ -215,5 +214,4 @@ elif opc == 2:
             print("Se ha registrado correctamente")
             print("********************************************************")
             print (data)
-
 
