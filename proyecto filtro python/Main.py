@@ -32,7 +32,7 @@ try:
 except ValueError:
     print("Por favor ingrese un número válido.")
 
-if opc == len(menu_principal) -1 :
+if opc == len(menu_principal):
     print("                        ")
     print("SALIENDO.....")
     print("*****************************")
