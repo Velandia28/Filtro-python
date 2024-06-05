@@ -1,42 +1,30 @@
 [
     {
-        "Doc": "100",
-        "Nombres": "felipe",
-        "Apellidos": "llane",
-        "Direccion": "diamont 2",
-        "Acudiente": "monica vel, mama, 3102182350",
-        "Celular": "3219123265",
+        "Doc": "120",
+        "Nombres": "JULIAN",
+        "Apellidos": "PIE\u00d1EROS",
+        "Direccion": "PIECTA",
+        "Acudiente": "JORGE,PAPA,264343",
+        "Celular": "32185151",
         "Estado": "Aprobado",
-        "Ruta Asignada": "netcore",
+        "Ruta Asignada": "NETCORE",
         "Riesgo": "",
-        "Aula": "Apolo",
-        "Trainer": "adeian"
-    },
-    {
-        "Doc": "1200",
-        "Nombres": "bdsf",
-        "Apellidos": "gfds",
-        "Direccion": "bga",
-        "Acudiente": "msdg. mama.",
-        "Celular": "156",
-        "Estado": "Aprobado",
-        "Ruta Asignada": "netcore",
-        "Riesgo": "",
-        "Aula": "Apolo",
-        "Trainer": " andes"
+        "Aula": "Artemis",
+        "Trainer": " JUAN MARI\u00d1O",
+        "Horario": "6.00am - 10.00am"
     },
     {
         "Doc": "130",
-        "Nombres": "jorge",
-        "Apellidos": "lopez",
-        "Direccion": "bga",
-        "Acudiente": "hgdag, mama,561",
-        "Celular": "313",
+        "Nombres": "d",
+        "Apellidos": "sd",
+        "Direccion": "stA",
+        "Acudiente": "jorge",
+        "Celular": "3153",
         "Estado": "Aprobado",
         "Ruta Asignada": "java",
-        "Riesgo": "",
-        "Aula": "Apolo",
-        "Trainer": "fel",
-        "Horario": "6.00 p - 10.00pm"
+        "Riesgo": "alto",
+        "Aula": "Sputnik",
+        "Trainer": "juanjose",
+        "Horario": "10.00 am - 2.00pm"
     }
 ]
