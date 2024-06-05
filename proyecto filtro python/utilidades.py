@@ -246,8 +246,5 @@ def estado_riesgo():
         print("********************************************************")
         print("Se ha registrado correctamente")
         print("********************************************************")       
-
         
-        
-
 menu_principal()
