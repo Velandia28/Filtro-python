@@ -73,9 +73,7 @@ def menu_coordinador():
     print("BIENVENIDO COORDINADOR")
     print ("                       ")
     print("Escoja la opción que va a realizar")
-
     menu_cor = ("1. registrar camper", "2. registrar notas","3. Ingresar matricula ","4. Asignar area de entrenamiento ","5. estado de riesgo ", "6. SALIR.. ","7. Volver ")
-
     while True:
         mostrar_menu(menu_cor)
         try:
@@ -155,6 +153,7 @@ def registrar_notas():
         except ValueError:
             print("Error de digitación, favor ingresar UNICAMENTE NÚMEROS")
             nota_teo, nota_pract = 0, 0
+        global prom
         prom = (nota_pract + nota_teo) / 2
         if prom >= 60:
             camper["Estado"] = "Aprobado"
@@ -199,7 +198,7 @@ def asignar_area_entrenamiento():
             camper["Aula"] = "Artemis"
         elif camper["Ruta Asignada"].lower() == "nodejs":
             camper["Aula"] = "Apolo"
-            aula=alua+1
+            aula=aula+1
 
         guardar_datos(data)
         print("********************************************************")
@@ -238,13 +237,18 @@ def estado_riesgo():
     data=cargar_datos()
     camper = next((item for item in data if item["Doc"] == doc), None)
     if camper:
-        print(datos["Ruta Asignada"])
-        Riesgos = input("su nuevo estado en el campo riesgo es : ") 
-        #validacion para que si estado es = a "en proceso de inscripcion "  riesgo= "todavia no es un camper oficial" else riesgo = "aprobado" pero prom < 60 print(riesgo es alto segun el promedio generado )
-        camper["Riesgo"] = Riesgos
-        guardar_datos(data)
-        print("********************************************************")
-        print("Se ha registrado correctamente")
-        print("********************************************************")       
+        # print(datos["Ruta Asignada"])
+        if datos["Estado"]=="proceso de ingreso":      
+            camper["Riesgo"] = "Todavia no es un CAMPER OFICIAL"
+        elif datos["Estado"] == "Aprobado" and prom < 60:
+            camper["Riesgo"] = "Riesgo alto segun el promedio que tiene"
+        elif datos["Estado"] == "Aprobado"  and prom >60 and  prom <90:
+            camper["Riesgo"] = "Riesgo medio segun el promedio que tiene"
+        elif datos["Estado"] == "Aprobado"  and prom >= 90:
+            camper["Riesgo"] = "Riesgo bajo  segun el promedio que tiene"
+    guardar_datos(data)
+    print("********************************************************")
+    print("Se ha registrado correctamente")
+    print("********************************************************")       
         
 menu_principal()
