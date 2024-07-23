@@ -7,3 +7,7 @@ Este proyecto se desarrolla con la finalidad de afianzar conocimientos de python
 |1.1| COORDINADOR    |
 |1.2| TRAINER        |
 |1.3| CAMPER         |
+
+>CARACTERISTICAS DE CADA UNO DE LAS OPCIONES DEL MENU
+> [!IMPORTANT]  
+> Esto es información importante las opciones del menu comparten las funciones de salir y volver al menu anterior
