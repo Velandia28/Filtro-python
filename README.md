@@ -3,4 +3,4 @@ Este proyecto se desarrolla con la finalidad de afianzar conocimientos de python
 
 |  INDICE  |  TITULO  |
 |--|--|
-| 1 | DEFINICION | 
+| 1 | MENU PRINCIPAL | 
