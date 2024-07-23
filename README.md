@@ -1,5 +1,6 @@
-# Proyecto Filtro 
+# Proyecto CAmpus (Filtro) 
 Este proyecto se desarrolla con la finalidad de afianzar conocimientos de python en general y aplicando los conocimientos para crear un CRUD, aplicando archivos Json
+al proyecto le hace falta las funciones del campo del camper para finalizarlo 
 
 |  INDICE  |  TITULO  |
 |--|--|
