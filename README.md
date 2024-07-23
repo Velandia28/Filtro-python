@@ -4,3 +4,6 @@ Este proyecto se desarrolla con la finalidad de afianzar conocimientos de python
 |  INDICE  |  TITULO  |
 |--|--|
 | 1 | MENU PRINCIPAL | 
+|1.1| COORDINADOR    |
+|1.2| TRAINER        |
+|1.3| CAMPER         |
