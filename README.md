@@ -30,6 +30,6 @@ al proyecto le hace falta las funciones del campo del camper para finalizarlo
 
 ## EVIDENCIA FOTOGRAFICA DE LOS AVANCES
 Evidendcia Menu Principal
-.
-.
+
+
 ![PANTALLAZO MENU GENERAL](./PANTALLAZO1.png)
