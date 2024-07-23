@@ -28,4 +28,4 @@ Este proyecto se desarrolla con la finalidad de afianzar conocimientos de python
 > Las Funciones de camper no se han asigando por falta de requeriminetos
 
 ## EVIDENCIA FOTOGRAFICA DE LOS AVANCES
-![imagen gato](home/camper/Escritorio/Filtro-python-main/proyecto filtro python/Captura desde 2024-07-23 13-03-00.png)
+
